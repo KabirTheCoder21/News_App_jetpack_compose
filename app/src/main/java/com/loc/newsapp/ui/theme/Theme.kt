@@ -20,21 +20,23 @@ private val DarkColorScheme = darkColorScheme(
     background = Black,
     primary = Blue,
     error = DarkRed,
-    surface = LightBlack
+    surface = LightBlack,
+    onBackground = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
     background = Color.White,
     primary = Blue,
     error = LightRed,
-    surface = Color.White
+    surface = Color.White,
+    onBackground = Color.Black
 )
 
 @Composable
 fun NewsAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
